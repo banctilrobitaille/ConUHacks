@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'foundation/css/foundation.css' %}">
-    <script src="{% static 'foundation/js/foundation.js' %}"></script>
-    <title>TEST APP</title>
-</head>
-<body>
-    <h1>WELCOME {{ username }}</h1>
-    <p>{{ user }}</p>
-</body>
+{% extends "IntelligentCellar/base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <center><h1><strong>Intelligent Cellar</strong></h1>
+        <img style="padding-top: 10%" src="{% static 'IntelligentCellar/img/settings.png' %}"/>
+        <p>{{ Name }}</p>
+    </center>
+{% endblock %}
+

@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'IntelligentCellar'
+    'IntelligentCellar',
+    'bootstrap3',
 ]
 
 MIDDLEWARE_CLASSES = [
