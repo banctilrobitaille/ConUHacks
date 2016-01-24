@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b84c3599-ab87-492a-ab95-b13549582355" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/IntelligentCellar/static/IntelligentCellar/img/settings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/IntelligentCellar/base.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IntelligentCellar/static/foundation/css/foundation.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IntelligentCellar/static/foundation/js/foundation.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/IntelligentCellar/static/IntelligentCellar/css/hover.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IntelligentCellar/static/IntelligentCellar/img/Research.png" afterPath="$PROJECT_DIR$/IntelligentCellar/static/IntelligentCellar/img/Research.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ConUHacks/settings.py" afterPath="$PROJECT_DIR$/ConUHacks/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ConUHacks/urls.py" afterPath="$PROJECT_DIR$/ConUHacks/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IntelligentCellar/models.py" afterPath="$PROJECT_DIR$/IntelligentCellar/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IntelligentCellar/views.py" afterPath="$PROJECT_DIR$/IntelligentCellar/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/IntelligentCellar/base.html" afterPath="$PROJECT_DIR$/templates/IntelligentCellar/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/IntelligentCellar/index.html" afterPath="$PROJECT_DIR$/templates/IntelligentCellar/index.html" />
     </list>
     <ignored path="ConUHacks.iws" />
@@ -74,11 +68,25 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/IntelligentCellar/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24961479">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41602466">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#center#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hover.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IntelligentCellar/static/IntelligentCellar/css/hover.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.0">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,8 +116,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/IntelligentCellar/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.0">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            <state vertical-scroll-proportion="-6.6666665">
+              <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -146,8 +154,8 @@
         <option value="$PROJECT_DIR$/ConUHacks/settings.py" />
         <option value="$PROJECT_DIR$/ConUHacks/urls.py" />
         <option value="$PROJECT_DIR$/IntelligentCellar/views.py" />
-        <option value="$PROJECT_DIR$/templates/IntelligentCellar/base.html" />
         <option value="$PROJECT_DIR$/IntelligentCellar/models.py" />
+        <option value="$PROJECT_DIR$/templates/IntelligentCellar/base.html" />
         <option value="$PROJECT_DIR$/templates/IntelligentCellar/index.html" />
       </list>
     </option>
@@ -220,10 +228,6 @@
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntelligentCellar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -236,32 +240,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="IntelligentCellar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ConUHacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ConUHacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntelligentCellar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntelligentCellar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,11 +269,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/IntelligentCellar/static/IntelligentCellar/css" />
       <recent name="$PROJECT_DIR$/IntelligentCellar/static/IntelligentCellar/img" />
       <recent name="$PROJECT_DIR$/IntelligentCellar/static" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/IntelligentCellar/static/foundation/js" />
-      <recent name="$PROJECT_DIR$/IntelligentCellar/static/foundation/css" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.ConUHacks">
@@ -653,20 +631,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/IntelligentCellar/static/IntelligentCellar/css/hover.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/IntelligentCellar/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.0">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state vertical-scroll-proportion="-6.6666665">
+          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/IntelligentCellar/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24961479">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41602466">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#center#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
