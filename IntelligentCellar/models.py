@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils import timezone
+from scrapy_djangoitem import DjangoItem
 # Create your models here.
 
 
@@ -69,16 +70,17 @@ class Recipe(models.Model):
 
 class Bottle(models.Model):
 
+    name = models.CharField(max_length=50, null=True)
     country = models.CharField(max_length=20)
-    classification = models.CharField(max_length=20)
-    regulatedDesignation = models.CharField(max_length=20)
+    classification = models.CharField(max_length = 50)
+    regulatedDesignation = models.CharField(max_length=50, null=True)
     producer = models.CharField(max_length=30)
-    grapeVariety = models.ForeignKey(GrapeVariety)
+    #grapeVariety = models.ForeignKey(GrapeVariety)
     colour = models.CharField(max_length=20)
-    size = models.FloatField()
-    degreeOfAlcohol = models.FloatField()
+    size = models.CharField(max_length=20)
+    degreeOfAlcohol = models.CharField(max_length=10, null=True)
     sugarContent = models.CharField(max_length=20)
-    evaluation = models.IntegerField()
+    evaluation = models.IntegerField(null=True)
     inStock = models.BooleanField(default=False)
     cup = models.CharField(max_length=14)
 
@@ -95,3 +97,7 @@ class Transaction(models.Model):
     requestTime = models.DateTimeField(default=timezone.now, blank=True)
     completedTime = models.DateTimeField()
     completed = models.BooleanField(default=False)
+
+class Crawler(models.Model):
+
+    cup = models.CharField(max_length=30)

@@ -1,0 +1,32 @@
+2016-01-26 06:30:43 [scrapy] INFO: Scrapy 1.0.3 started (bot: firstapp)
+2016-01-26 06:30:43 [scrapy] INFO: Optional features available: ssl, http11
+2016-01-26 06:30:43 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'firstapp.spiders', 'SPIDER_MODULES': ['firstapp.spiders'], 'FEED_URI': 'file:///home/dev/PycharmProjects/ConUHacks/firstapp/items/firstapp/SAQ/3d09d2d6c3f611e5aad7000c29950337.jl', 'LOG_FILE': 'logs/firstapp/SAQ/3d09d2d6c3f611e5aad7000c29950337.log', 'BOT_NAME': 'firstapp'}
+2016-01-26 06:30:43 [scrapy] INFO: Enabled extensions: CloseSpider, FeedExporter, TelnetConsole, LogStats, CoreStats, SpiderState
+2016-01-26 06:30:43 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-01-26 06:30:43 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-01-26 06:30:43 [scrapy] INFO: Enabled item pipelines: 
+2016-01-26 06:30:43 [scrapy] INFO: Spider opened
+2016-01-26 06:30:43 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-01-26 06:30:43 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-01-26 06:30:43 [scrapy] DEBUG: Redirecting (302) to <GET http://www.saq.com/page/fr/saqcom/vin-blanc/kim-crawford-sauvignon-blanc/10327701> from <GET http://www.saq.com/webapp/wcs/stores/servlet/SearchDisplay?storeId=20002&catalogId=50000&langId=-2&pageSize=20&beginIndex=0&searchCategroy=Entete&searchTerm=9419227006275>
+2016-01-26 06:30:43 [scrapy] DEBUG: Crawled (200) <GET http://www.saq.com/page/fr/saqcom/vin-blanc/kim-crawford-sauvignon-blanc/10327701> (referer: None)
+2016-01-26 06:30:44 [scrapy] INFO: Closing spider (finished)
+2016-01-26 06:30:44 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1947,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 32082,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/302': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 1, 26, 6, 30, 44, 128784),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2016, 1, 26, 6, 30, 43, 659875)}
+2016-01-26 06:30:44 [scrapy] INFO: Spider closed (finished)

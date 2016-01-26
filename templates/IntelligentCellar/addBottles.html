@@ -1,0 +1,26 @@
+{% extends "IntelligentCellar/base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <center>
+    <form method="post" action="addbottle">
+        {% csrf_token %}
+        <table>{{BottleForm}}
+        </table>
+        <input class="btn btn-primary" style="margin:1%; padding: 1%" type="submit" value="Add Bottle"/>
+        <p>{{ cup }}</p>
+        <p>{{ crawler.cup }}</p>
+        {%  for bottle in bottles %}
+            <div style="background-color: lightgrey; border-radius: 10px; padding: 1%,margin: 1%; width: 20%">
+                <h4>{{ bottle.name }}</h4>
+                <p>{{ bottle.country }}</p>
+                <p>{{ bottle.producer }}</p>
+                <p>{{ bottle.degreeOfAlcohol}}</p>
+                <p>{{ bottle.size }}</p>
+                <p>{{ bottle.colour }}</p>
+                <p>{{ bottle.cup }}</p>
+            </div>
+
+        {% endfor %}
+    </form>
+    </center>
+{% endblock %}

@@ -1,14 +1,46 @@
 from django.shortcuts import render
 from django.template import RequestContext
-from django.shortcuts import render_to_response
+from django.shortcuts import render
+from form import BottleForm
 from models import Cellar
+from models import Bottle
+from models import Crawler
+from scrapyd_api import ScrapydAPI
+import time
 # Create your views here.
+
+scrapyd = ScrapydAPI('http://localhost:6800')
 
 
 def index(request):
 
-    cellar = Cellar.objects.filter(name="Test", isConfigured=True)
+    cellar = Cellar.objects.filter(name="Test", isConfigured=False)
+    context_dict = {'Cellar': cellar}
 
-    name = cellar.count()
-    context_dict = {'Name': name}
-    return render_to_response('IntelligentCellar/index.html', context_dict)
+    return render(request,'IntelligentCellar/index.html', context_dict)
+
+
+def myCellar(request):
+
+    cellar = Cellar.objects.filter(name="Test", isConfigured=False)
+    context_dict = {'Cellar': cellar}
+
+    return render(request,'IntelligentCellar/mycellar.html', context_dict)
+
+def addBottle(request):
+
+    context_dict = {}
+    if request.method == 'POST':
+        print request.POST.get('cup', '')
+        crawler = Crawler.objects.all()[0]
+        crawler.cup = request.POST.get('cup', '')
+        crawler.save()
+        scrapyd.schedule('firstapp','SAQ')
+        time.sleep(2)
+        context_dict['bottles'] = Bottle.objects.all()
+        context_dict['crawler'] = crawler
+        #Bottle.objects.all().delete()
+
+    context_dict['BottleForm'] = BottleForm()
+
+    return render(request, 'IntelligentCellar/addBottles.html', context_dict)

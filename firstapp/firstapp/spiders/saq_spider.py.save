@@ -1,0 +1,28 @@
+import scrapy
+
+
+class SAQCrawler(scrapy.Spider):
+
+    name = "SAQ"
+    allowed_domains = ["saq.com"]
+    start_urls = [
+        "http://www.saq.com/webapp/wcs/stores/servlet/SearchDisplay?storeId=20002&catalogId=50000&"
+        "langId=-2&pageSize=20&beginIndex=0&searchCategroy=Entete&searchTerm=08437001114917",
+    ]
+
+    def parse(self, response):
+	
+	name = response.xpath('//h1[@class="product-description-title"]/text()').extract()
+	description =  response.xpath('//div[@class="product-description-title-type"]/text()').extract()
+	print response.xpath('//div[@class="product-description-row2"]/text()').extract()
+	print response.xpath('//div[@class="product-page-subtitle"]/text()').extract()        
+	print response.xpath('//td[@class="product-detailsR"]/span/text()').extract()	
+
+	# hxs = scrapy.selector.HtmlXPathSelector(response)
+
+        # bottle = BottleItem()
+        # name = hxs.select('//div[@class="product-description-title"]').extract()
+
+        # print name
+
+        # return bottle

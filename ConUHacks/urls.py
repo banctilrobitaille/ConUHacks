@@ -23,5 +23,8 @@ from IntelligentCellar.models import Cellar
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', views.index)
+    url(r'^mycellars', views.myCellar),
+    url(r'^addbottle', views.addBottle),
+    url(r'^addbottle*', views.addBottle),
+    url(r'^', views.index),
 ]

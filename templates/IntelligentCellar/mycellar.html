@@ -1,0 +1,23 @@
+{% extends "IntelligentCellar/base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <center><h1><strong>My cellars</strong></h1>
+        {% for cellar in Cellar %}
+            <div style="margin:auto;width: 75%; height: 10%;padding: 3%">
+                <a class="hvr-grow" href="">
+                    <div style="margin-top: 5%;background-color:purple;border-radius: 10px">
+                        <div style="padding: 1%">
+                            <div>
+                                <img style="width:100%;height: 100%" src="{% static "IntelligentCellar/img/cellar.png" %}"/>
+                            </div>
+                            <div>
+                                <h2><strong>NAME: {{ cellar.name }}</strong></h2>
+                                <h2>IS CONFIGURED: {{ cellar.isConfigured }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </center>
+{% endblock %}
