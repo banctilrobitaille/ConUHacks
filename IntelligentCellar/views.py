@@ -12,6 +12,7 @@ import time
 scrapyd = ScrapydAPI('http://localhost:6800')
 
 
+
 def index(request):
 
     cellar = Cellar.objects.filter(name="Test", isConfigured=False)
@@ -31,13 +32,13 @@ def addBottle(request):
 
     context_dict = {}
     if request.method == 'POST':
-        print request.POST.get('cup', '')
+        cup = request.POST.get('cup', '')
         crawler = Crawler.objects.all()[0]
         crawler.cup = request.POST.get('cup', '')
         crawler.save()
         scrapyd.schedule('firstapp','SAQ')
-        time.sleep(2)
-        context_dict['bottles'] = Bottle.objects.all()
+        time.sleep(3)
+        context_dict['bottles'] = Bottle.objects.all()#filter(cup=cup)
         context_dict['crawler'] = crawler
         #Bottle.objects.all().delete()
 

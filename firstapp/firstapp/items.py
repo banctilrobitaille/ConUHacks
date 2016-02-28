@@ -14,6 +14,6 @@ class BottleItems(DjangoItem):
 
     django_model = Bottle
 
-class CrawkerItems(DjangoItem):
+class CrawlerItems(DjangoItem):
 
     django_model = Crawler

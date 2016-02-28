@@ -83,6 +83,7 @@ class Bottle(models.Model):
     evaluation = models.IntegerField(null=True)
     inStock = models.BooleanField(default=False)
     cup = models.CharField(max_length=14)
+    image_url = models.CharField(max_length=100, null=True)
 
 
 class Transaction(models.Model):
@@ -97,6 +98,7 @@ class Transaction(models.Model):
     requestTime = models.DateTimeField(default=timezone.now, blank=True)
     completedTime = models.DateTimeField()
     completed = models.BooleanField(default=False)
+
 
 class Crawler(models.Model):
 

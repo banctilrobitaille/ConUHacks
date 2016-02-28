@@ -10,33 +10,30 @@ class SAQCrawler(scrapy.Spider):
     start_urls = [
         "http://www.saq.com/webapp/wcs/stores/servlet/SearchDisplay?storeId=20002&catalogId=50000&"
         "langId=-2&pageSize=20&beginIndex=0&searchCategroy=Entete&searchTerm=" + cup,
-        #3258691243115
-        #9419227006275
-        #9300727488114
     ]
 
     def parse(self, response):
 
-        nom = "\n\n\n" + "Nom : " + response.xpath('//h1[@class="product-description-title"]/text()').extract_first().\
+        nom = response.xpath('//h1[@class="product-description-title"]/text()').extract_first().\
             replace('\n', ' ').replace('\r', '').encode('utf-8')
-        print nom
 
-        color = "\n" + "Couleur : " + response.xpath('//div[@class="product-description-title-type"]/text()').extract_first().\
+        color = response.xpath('//div[@class="product-description-title-type"]/text()').extract_first().\
             replace('\n', ' ').replace('\r', ' ').replace(' ', '').split("Vin")[1].split(",")[0].encode('utf-8')
-        print color
 
-        size = "\n" + "Capacite : " + response.xpath('//div[@class="product-description-title-type"]/text()').extract_first().\
+        size = response.xpath('//div[@class="product-description-title-type"]/text()').extract_first().\
             replace('\n', ' ').replace('\r', ' ').replace(' ', '').split(",")[1].split(",")[0].encode('utf-8')
-        print size
 
-        country = "\n" + "Pays : " + response.xpath('//div[@class="product-page-subtitle"]/text()').extract_first().\
+        country = response.xpath('//div[@class="product-page-subtitle"]/text()').extract_first().\
             replace('\n', '').replace('\r', '').replace(' ', '').encode('utf-8')
-        print country
 
-        region = "\n" + "Region : " + response.xpath('//div[@class="product-description-region product-page-subtitle"]/text()').\
+        region = response.xpath('//div[@class="product-description-region product-page-subtitle"]/text()').\
             extract_first().replace('\n', '').replace('\r', '').replace(' ', '').encode('utf-8')
-        print region
 
+        code_SAQ = response.xpath('//div[@class="product-description-row2"]').re(r'[0-9]{8}')[0]
+
+        image_url = "https://s7d9.scene7.com/is/image/SAQ/" + code_SAQ + "_is?$saq%2Dprod%2Dtra$"
+
+        print image_url
         #print response.xpath('//td[@class="product-detailsL"]/span/text()').count()
 
         productDetailsR = response.xpath('//td[@class="product-detailsL"]/span/text()').extract()
@@ -58,7 +55,7 @@ class SAQCrawler(scrapy.Spider):
 
             elif "Producteur" in productDetailsR[i]:
                productor =  productDetailsL[i].\
-            replace('\n', ' ').replace('\r', ' ').replace(' ', '').encode('utf-8')
+            replace('\n', ' ').replace('\r', ' ').encode('utf-8')
 
 
        #
@@ -92,4 +89,5 @@ class SAQCrawler(scrapy.Spider):
         b.country = country
         b.regulatedDesignation = appelationControlle
         b.size = size
+        b.image_url = image_url
         b.save()

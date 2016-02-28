@@ -2,13 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% load staticfiles %}
     {% load bootstrap3 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
     {% bootstrap_messages %}
+    {% load staticfiles %}
 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Slab" />
     <link rel="stylesheet" type="text/css" href="{% static 'IntelligentCellar/css/hover.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'IntelligentCellar/css/custom.css' %}" />
+
+    <style>
+        body {
+            font-family: Josefin Slab;
+            font-weight: 700;
+        }
+
+        .btn {
+
+            border-radius: 0px;
+            background-color: #663333;
+            border-color: #663333;
+        }
+
+        input.btn.btn-primary{
+
+            font-weight: 700;
+
+        }
+
+        .btn:hover, .btn:focus, input.btn.btn-primary:active{
+
+            border-radius: 0px;
+            background-color: #563333;
+            border-color: #663333;
+        }
+
+    </style>
 
     <title>IN VINO VERITAS</title>
 </head>
@@ -20,7 +50,8 @@
                     <a class="navbar-brand" href="#">IN VINO VERITAS</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="/"><strong>Home</strong></a></li>
+                    <li class="active"><a href="/"><strong>My Inventory</strong></a></li>
                 </ul>
             </div>
         </nav>
