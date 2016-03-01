@@ -24,3 +24,11 @@
     color: white;
 
 }
+
+.btn.btn-default.dropdown-toggle{
+
+    background-color: white;
+    color: #663333;
+    border-color: #663333;
+    border-style: solid;
+}

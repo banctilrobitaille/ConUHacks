@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^mycellars', views.myCellar),
     url(r'^addbottle', views.addBottle),
     url(r'^addbottle*', views.addBottle),
+    url(r'^inventory', views.inventory),
     url(r'^', views.index),
 ]

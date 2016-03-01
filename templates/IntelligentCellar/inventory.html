@@ -1,0 +1,61 @@
+{% extends "IntelligentCellar/base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <div id="title" style="width: 100%; margin: auto; text-align: center;">
+
+        <h1 style="color: #663333">My Inventory</h1>
+    </div>
+    <div style="width: 45%; margin: auto; text-align: center;">
+        <div style="text-align: left">
+            <h3 style="color: #663333">Search filters</h3>
+        </div>
+        <form style="margin: 5%" method="post" action="inventory">
+            {% csrf_token %}
+            <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Country
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                {% for country in countries %}
+                    <li><a href="#">{{ country }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        </form>
+        <div style="height: 2px;background-color: #663333;">
+        </div>
+    </div>
+
+    <div style="margin: auto; width: 75%; text-align: center">
+        {%  for bottle in bottles %}
+            <div class="bottle" style="display: inline-block;background-color: #EEEEEE;padding: 1%;margin: 2%;width: 30%;">
+                <div style="background-color: white; border-color: #663333; border-style: solid;margin: 1%;">
+                    {% if bottle.image_url %}
+                        <a href="#"><img style="display: inline-block;" src="{{ bottle.image_url }}"/></a>
+                    {% else %}
+                        <a href="#"><img style="display: inline-block;" src="{% static 'IntelligentCellar/img/bottle.png' %}"/></a>
+                    {% endif %}
+                </div>
+                <div>
+                    <div style="text-align: center">
+                        <h4><strong>{{ bottle.name }}</strong></h4>
+                    </div>
+                    <div style="text-align: left">
+                        <h4>Pays: {{ bottle.country }}</h4>
+                        <h4>Producteur: {{ bottle.producer }}</h4>
+                        <h4>Teneur en alcool: {{ bottle.degreeOfAlcohol}}</h4>
+                        <h4>Capacité: {{ bottle.size }}</h4>
+                        <h4>Couleur: {{ bottle.colour }}</h4>
+                        <h4>CUP: {{ bottle.cup }}</h4>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
+
+    <script>
+        window.sr = ScrollReveal().reveal('.bottle');
+    </script>
+{% endblock %}

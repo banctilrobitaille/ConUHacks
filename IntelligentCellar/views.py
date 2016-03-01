@@ -28,6 +28,7 @@ def myCellar(request):
 
     return render(request,'IntelligentCellar/mycellar.html', context_dict)
 
+
 def addBottle(request):
 
     context_dict = {}
@@ -45,3 +46,18 @@ def addBottle(request):
     context_dict['BottleForm'] = BottleForm()
 
     return render(request, 'IntelligentCellar/addBottles.html', context_dict)
+
+
+def inventory(request):
+
+    context_dict = {}
+
+    if request.method == 'POST':
+        pass
+
+    else:
+
+        context_dict['countries'] = Bottle.objects.values('country').distinct()
+        context_dict['bottles'] = Bottle.objects.all()
+
+    return render(request, 'IntelligentCellar/inventory.html', context_dict)
